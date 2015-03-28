@@ -4,6 +4,8 @@ import datetime
 GPIO = webiopi.GPIO
 
 LIGHT = 17 # GPIO pin using BCM numbering
+SERVO_1 = 21 #GPIO pin, to arduino for SERVO_1 control 
+SERVO_2 = 22 #GPIO pin, to arduino for SERVO_2 control 
 
 HOUR_ON  = 8  # Turn Light ON at 08:00
 HOUR_OFF = 18 # Turn Light OFF at 18:00
@@ -12,6 +14,8 @@ HOUR_OFF = 18 # Turn Light OFF at 18:00
 def setup():
     # set the GPIO used by the light to output
     GPIO.setFunction(LIGHT, GPIO.OUT)
+    GPIO.setFunction(SERVO_1, GPIO.OUT)
+    GPIO.setFunction(SERVO_2, GPIO.OUT)
 
     # retrieve current datetime
     now = datetime.datetime.now()
