@@ -9,8 +9,16 @@
                 // Create a "Light" labeled button for GPIO 17
                 var button = webiopi().createGPIOButton(17, "Light");
 
-                // Append button to HTML element with ID="controls" using jQuery
+                // Create a "SERVO_1" labeled button for GPIO 21
+                var button2 = webiopi().createGPIOButton(21, "Light");
+                
+		// Create a "SERVO_2" labeled button for GPIO 22 
+                var button3 = webiopi().createGPIOButton(22, "Light");
+                
+		// Append button to HTML element with ID="controls" using jQuery
                 $("#controls").append(button);
+                $("#controls2").append(button2);
+                $("#controls3").append(button3);
 
                 // Refresh GPIO buttons
                 // pass true to refresh repeatedly of false to refresh once
@@ -18,7 +26,10 @@
         });
                 
         </script>
-        <style type="text/css">
+        
+
+
+	<style type="text/css">
                 button {
                         display: block;
                         margin: 5px 5px 5px 5px;
@@ -37,9 +48,51 @@
                         background-color: Blue;
                 }
         </style>
+
+	<style type="text/css">
+                button2 {
+                        display: block;
+                        margin: 5px 5px 5px 5px;
+                        width: 160px;
+                        height: 45px;
+                        font-size: 24pt;
+                        font-weight: bold;
+                        color: white;
+                }
+                
+                #gpio21.LOW {
+                        background-color: Black;
+                }
+                
+                #gpio21.HIGH {
+                        background-color: Blue;
+                }
+        </style>
+
+	<style type="text/css">
+                button3 {
+                        display: block;
+                        margin: 5px 5px 5px 5px;
+                        width: 160px;
+                        height: 45px;
+                        font-size: 24pt;
+                        font-weight: bold;
+                        color: white;
+                }
+                
+                #gpio22.LOW {
+                        background-color: Black;
+                }
+                
+                #gpio22.HIGH {
+                        background-color: Blue;
+                }
+        </style>
 </head>
 <body>
         <div id="controls" align="center"></div>
+        <div id="controls2" align="center"></div>
+        <div id="controls3" align="center"></div>
 </body>
 </html>
 

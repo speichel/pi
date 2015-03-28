@@ -45,3 +45,5 @@ def loop():
 # destroy function is called at WebIOPi shutdown
 def destroy():
     GPIO.digitalWrite(LIGHT, GPIO.LOW)
+    GPIO.digitalWrite(SERVO_1, GPIO.LOW)
+    GPIO.digitalWrite(SERVO_2, GPIO.LOW)
