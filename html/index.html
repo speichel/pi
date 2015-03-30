@@ -10,15 +10,15 @@
                 var button = webiopi().createGPIOButton(17, "Light");
 
                 // Create a "SERVO_1" labeled button for GPIO 21
-                var button2 = webiopi().createGPIOButton(21, "Light");
+                var button2 = webiopi().createGPIOButton(21, "Servo 1");
                 
 		// Create a "SERVO_2" labeled button for GPIO 22 
-                var button3 = webiopi().createGPIOButton(22, "Light");
+                var button3 = webiopi().createGPIOButton(22, "Servo 2");
                 
 		// Append button to HTML element with ID="controls" using jQuery
                 $("#controls").append(button);
-                $("#controls2").append(button2);
-                $("#controls3").append(button3);
+                $("#controls").append(button2);
+                $("#controls").append(button3);
 
                 // Refresh GPIO buttons
                 // pass true to refresh repeatedly of false to refresh once
@@ -91,8 +91,8 @@
 </head>
 <body>
         <div id="controls" align="center"></div>
-        <div id="controls2" align="center"></div>
-        <div id="controls3" align="center"></div>
+        <div id="controls" align="center"></div>
+        <div id="controls" align="center"></div>
 </body>
 </html>
 

@@ -20,7 +20,7 @@ def setup():
     # retrieve current datetime
     now = datetime.datetime.now()
 
-    # test if we are between ON time and tun the light ON
+    # test if we are between ON time and turn the light ON
     if ((now.hour >= HOUR_ON) and (now.hour < HOUR_OFF)):
         GPIO.digitalWrite(LIGHT, GPIO.HIGH)
 
@@ -30,15 +30,15 @@ def loop():
     now = datetime.datetime.now()
 
     # toggle light ON all days at the correct time
-    if ((now.hour == HOUR_ON) and (now.minute == 0) and (now.second == 0)):
-        if (GPIO.digitalRead(LIGHT) == GPIO.LOW):
-            GPIO.digitalWrite(LIGHT, GPIO.HIGH)
+    if ((now.hour == HOUR_ON) and (now.minute == 0) and (now.second == 0)): 
+        if (GPIO.digitalRead(LIGHT) == GPIO.LOW): 
+       	    PIO.digitalWrite(LIGHT, GPIO.HIGH)
 
-    # toggle light OFF
-    if ((now.hour == HOUR_OFF) and (now.minute == 0) and (now.second == 0)):
-        if (GPIO.digitalRead(LIGHT) == GPIO.HIGH):
+# toggle light OFF
+    if ((now.hour == HOUR_OFF) and (now.minute == 0) and (now.second == 0)): 
+        if (GPIO.digitalRead(LIGHT) == GPIO.HIGH): 
             GPIO.digitalWrite(LIGHT, GPIO.LOW)
-
+	
     # gives CPU some time before looping again
     webiopi.sleep(1)
 
