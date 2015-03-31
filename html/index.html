@@ -6,19 +6,19 @@
         <script type="text/javascript" src="/webiopi.js"></script>
         <script type="text/javascript">
         webiopi().ready(function() {
-                // Create a "Light" labeled button for GPIO 17
+                // Create a "Light" labeled button for GPIO 17,21,22,23,24
                 var button = webiopi().createGPIOButton(17, "Light");
-
-                // Create a "SERVO_1" labeled button for GPIO 21
-                var button2 = webiopi().createGPIOButton(21, "Servo 1");
-                
-		// Create a "SERVO_2" labeled button for GPIO 22 
-                var button3 = webiopi().createGPIOButton(22, "Servo 2");
+                var button2 = webiopi().createGPIOButton(21, "Pan Right");
+                var button3 = webiopi().createGPIOButton(22, "Pan Left");
+                var button4 = webiopi().createGPIOButton(23, "Pan Up");
+                var button3 = webiopi().createGPIOButton(24, "Pan Down");
                 
 		// Append button to HTML element with ID="controls" using jQuery
                 $("#controls").append(button);
                 $("#controls").append(button2);
                 $("#controls").append(button3);
+                $("#controls").append(button4);
+                $("#controls").append(button5);
 
                 // Refresh GPIO buttons
                 // pass true to refresh repeatedly of false to refresh once
@@ -30,69 +30,27 @@
 
 
 	<style type="text/css">
-                button {
-                        display: block;
-                        margin: 5px 5px 5px 5px;
-                        width: 160px;
-                        height: 45px;
-                        font-size: 24pt;
-                        font-weight: bold;
-                        color: white;
-                }
-                
-                #gpio17.LOW {
-                        background-color: Black;
-                }
-                
-                #gpio17.HIGH {
-                        background-color: Blue;
-                }
+                button { display: block; margin: 5px 5px 5px 5px; width: 160px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                #gpio17.LOW { background-color: Black; }
+                #gpio17.HIGH { background-color: Blue; }
         </style>
 
 	<style type="text/css">
-                button2 {
-                        display: block;
-                        margin: 5px 5px 5px 5px;
-                        width: 160px;
-                        height: 45px;
-                        font-size: 24pt;
-                        font-weight: bold;
-                        color: white;
-                }
-                
-                #gpio21.LOW {
-                        background-color: Black;
-                }
-                
-                #gpio21.HIGH {
-                        background-color: Blue;
-                }
+                button2 { display: block; margin: 5px 5px 5px 5px; width: 160px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                #gpio21.LOW { background-color: Black; }
+                #gpio21.HIGH { background-color: Blue; }
         </style>
 
 	<style type="text/css">
-                button3 {
-                        display: block;
-                        margin: 5px 5px 5px 5px;
-                        width: 160px;
-                        height: 45px;
-                        font-size: 24pt;
-                        font-weight: bold;
-                        color: white;
-                }
-                
-                #gpio22.LOW {
-                        background-color: Black;
-                }
-                
-                #gpio22.HIGH {
-                        background-color: Blue;
-                }
+                button3 { display: block; margin: 5px 5px 5px 5px; width: 160px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                #gpio22.LOW { background-color: Black; }
+                #gpio22.HIGH { background-color: Blue; }
         </style>
 </head>
 <body>
-        <div id="controls" align="center"></div>
-        <div id="controls" align="center"></div>
-        <div id="controls" align="center"></div>
+	<div id="TopWrapper" style="margin: 0 auto; background:#FF0000; height:600px; width:600px;">
+		<div id="controls" align="center"></div>
+	</div>
 </body>
 </html>
 
