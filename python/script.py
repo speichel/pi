@@ -4,8 +4,10 @@ import datetime
 GPIO = webiopi.GPIO
 
 LIGHT = 17 # GPIO pin using BCM numbering
-SERVO_1 = 21 #GPIO pin, to arduino for SERVO_1 control 
-SERVO_2 = 22 #GPIO pin, to arduino for SERVO_2 control 
+SERVO_1A = 21 #GPIO pin, to arduino for SERVO_1A control 
+SERVO_1B = 22 #GPIO pin, to arduino for SERVO_1B control 
+SERVO_2A = 23 #GPIO pin, to arduino for SERVO_2A control 
+SERVO_2B = 24 #GPIO pin, to arduino for SERVO_2B control 
 
 HOUR_ON  = 8  # Turn Light ON at 08:00
 HOUR_OFF = 18 # Turn Light OFF at 18:00
@@ -14,8 +16,10 @@ HOUR_OFF = 18 # Turn Light OFF at 18:00
 def setup():
     # set the GPIO used by the light to output
     GPIO.setFunction(LIGHT, GPIO.OUT)
-    GPIO.setFunction(SERVO_1, GPIO.OUT)
-    GPIO.setFunction(SERVO_2, GPIO.OUT)
+    GPIO.setFunction(SERVO_1A, GPIO.OUT)
+    GPIO.setFunction(SERVO_1B, GPIO.OUT)
+    GPIO.setFunction(SERVO_2A, GPIO.OUT)
+    GPIO.setFunction(SERVO_2B, GPIO.OUT)
 
     # retrieve current datetime
     now = datetime.datetime.now()
@@ -45,5 +49,7 @@ def loop():
 # destroy function is called at WebIOPi shutdown
 def destroy():
     GPIO.digitalWrite(LIGHT, GPIO.LOW)
-    GPIO.digitalWrite(SERVO_1, GPIO.LOW)
-    GPIO.digitalWrite(SERVO_2, GPIO.LOW)
+    GPIO.digitalWrite(SERVO_1A, GPIO.LOW)
+    GPIO.digitalWrite(SERVO_1B, GPIO.LOW)
+    GPIO.digitalWrite(SERVO_2A, GPIO.LOW)
+    GPIO.digitalWrite(SERVO_2B, GPIO.LOW)

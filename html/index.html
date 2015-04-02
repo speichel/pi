@@ -11,7 +11,7 @@
                 var button2 = webiopi().createGPIOButton(21, "Pan Right");
                 var button3 = webiopi().createGPIOButton(22, "Pan Left");
                 var button4 = webiopi().createGPIOButton(23, "Pan Up");
-                var button3 = webiopi().createGPIOButton(24, "Pan Down");
+                var button5 = webiopi().createGPIOButton(24, "Pan Down");
                 
 		// Append button to HTML element with ID="controls" using jQuery
                 $("#controls").append(button);
@@ -30,21 +30,31 @@
 
 
 	<style type="text/css">
-                button { display: block; margin: 5px 5px 5px 5px; width: 160px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                button { display: block; margin: 5px 5px 5px 5px; width: 170px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
                 #gpio17.LOW { background-color: Black; }
                 #gpio17.HIGH { background-color: Blue; }
         </style>
 
 	<style type="text/css">
-                button2 { display: block; margin: 5px 5px 5px 5px; width: 160px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                button2 { display: block; margin: 5px 5px 5px 5px; width: 170px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
                 #gpio21.LOW { background-color: Black; }
                 #gpio21.HIGH { background-color: Blue; }
         </style>
 
 	<style type="text/css">
-                button3 { display: block; margin: 5px 5px 5px 5px; width: 160px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                button3 { display: block; margin: 5px 5px 5px 5px; width: 170px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
                 #gpio22.LOW { background-color: Black; }
                 #gpio22.HIGH { background-color: Blue; }
+        </style>
+	<style type="text/css">
+                button4 { display: block; margin: 5px 5px 5px 5px; width: 170px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                #gpio23.LOW { background-color: Black; }
+                #gpio23.HIGH { background-color: Blue; }
+        </style>
+	<style type="text/css">
+                button5 { display: block; margin: 5px 5px 5px 5px; width: 170px; height: 45px; font-size: 24pt; font-weight: bold; color: white; }
+                #gpio24.LOW { background-color: Black; }
+                #gpio24.HIGH { background-color: Blue; }
         </style>
 </head>
 <body>
